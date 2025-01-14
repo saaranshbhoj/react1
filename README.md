@@ -12,3 +12,6 @@ Minification of the file(it is basically a bundler bundle files together to make
 #Bable Package:
 parcel uses bable for transpiling(jS compiler takes your jsx and convert) the jsx/react code to the js engine.
 It converts jsx code to reactobject which eventually get rendered to html element that browser understands.
+
+#Creating a Food-Ordering App;
+We are using Basic React components to design App Layout,Header,Footer or the body.CSS is preferred for styling and our main aim to learn is how to make our web page dynamic. We do not recommend hard coding your data,it should be fetched from server directly to your container!

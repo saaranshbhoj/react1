@@ -1,3 +1,44 @@
-#heading{
-    color:Red;
+.header{
+    display: flex;
+    background-color:orange;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width: 10px;
+    size: 20px;
+}
+.nav-items>ul{
+    display: flex;
+    padding: 10px;
+    font-size: 24px;
+}
+.nav-items>ul>li{
+    padding: 10px;
+    margin: 10px;
+    font-size: large;
+    list-style-type: none;
+}
+.search{
+    padding: 10px;
+}
+.rest1{
+    width: 200px;
+    height: 300px;
+    background-color: antiquewhite;
+    padding: 5px;
+    margin: 5px;
+    overflow: hidden;
+    
+}
+.rest1:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.rest-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+.img1{
+    object-fit:cover;
 }
