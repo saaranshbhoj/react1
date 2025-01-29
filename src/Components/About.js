@@ -1,25 +1,30 @@
-import AboutClass from "./AboutClass";
 import React from "react";
-//class-Component of About Page;
-
+import AboutClass from "./AboutClass";
+// import AboutClass from "./"
+//Class-Based About Component;
 class About extends React.Component{
-    constructor(props){
-        super(props);
+    constructor(){
+        super(); //Mandatory to Call;
+       // console.log("Parent Constructor Called")
     }
-
-
     render(){
+        //console.log("Parent Render Called")
         return(
             <div className="about">
-                
-                <h1>Foodie-Bay was establsihed in 2008 and is a Registered Trademark of SaaranshBhojPvtLtd</h1>
-    
-                <AboutClass name="Saaranshh"/>
-                
+                <h1>Foodie-Bay is the registered Trademark of SaaranshBhojPrivateLtd.</h1>
+                <AboutClass name="Akshay Saini (class)"/>
             </div>
         )
     }
+    componentDidMount(){
+        //console.log("Parent Component Mount")    }
+        this.timer=setInterval(() =>{
+            console.log("Namaste React");
+        },1000);
+ }
+ componentWillUnmount(){
+    clearInterval(this.timer); //cleanup function use for better performance;
+ }
 }
-  
 
 export default About;
