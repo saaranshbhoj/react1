@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is namaste react by saaransh bhoj",
   "scripts": {
+    "dev": "parcel index.html",
     "test": "jest"
   },
   "repository": {
@@ -16,15 +17,18 @@
   "author": "Saaransh bhoj",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "parcel": "^2.13.3",
+    "postcss": "^8.5.1",
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2"
   },
-  "browserlist": [
+  "browserslist": [
     "last 2 chrome version",
     "last 10 firefox version"
   ]
