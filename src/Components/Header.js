@@ -1,38 +1,20 @@
-import { useEffect, useState } from "react";
-import { LOGO_URL } from "../utils/constants"; //import {url} from "path";
-import { useState,useEffect } from "react";
+import { LOGO_URL } from "../utils/constants"
 import { Link } from "react-router-dom";
-import useOnlineStatus from "../utils/useOnlineStatus";
-
-const Header=()=>{
-  const[Button,setButton]=useState("Login");
-  console.log("Header Rendered!")
-  const status=useOnlineStatus();
-  
-  
+const Header=() =>{
     return(
-      //UseState Local vaiable;
-      
-      <div className="header">
-        <div className="logo">
-          <img src={LOGO_URL}/>
-        </div>
-        <div className="nav-items">
-          <ul>
-            <li>Status:{status==true?"🟢":"🔴" } </li>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
-            <li><Link to="/grocery">Grocery</Link></li>
-            <li>Cart</li>
-            <div className="button">
-              <button className="btn" onClick={() =>
-              Button==="Login"?setButton("logout"):setButton("Login")
-              }>{Button}</button>
+        <div className="flex justify-between bg-pink-200 shadow-2xl m-2 mb-2 px-2" >
+            <div className="w-100">
+                <img src={LOGO_URL}></img>
             </div>
-          </ul>
+            <div className="flex items-center">
+                <ul className="flex p-4 m-4">
+                   <Link to="/"><li className="px-4">Home</li></Link> 
+                   <Link to="/about"><li className="px-4">About</li></Link> 
+                   <li className="px-4"><a href="/contact">Contact</a></li>
+                    <li className="px-4"><button className="login border border-black cursor-pointer">Login </button></li>
+                </ul>
+            </div>
         </div>
-      </div>
     )
-  }
+}
 export default Header;
