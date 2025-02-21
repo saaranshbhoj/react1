@@ -29,7 +29,7 @@ const RestaurantOpen=withOpenLabel(Rest1);
             <div className="filter p-4 m-4 flex">
                
                 <button className="button border-4 border-orange-300 bg-orange-300 cursor-pointer rounded-lg" onClick={() =>{
-                    filter=filteredList?.filter((x) =>(x.info.avgRating>4.2));
+                    const filter=filteredList?.filter((x) =>(x.info.avgRating>4.2));
                     console.log(filter);
                     setfilteredlist(filter);
                     
@@ -41,7 +41,7 @@ const RestaurantOpen=withOpenLabel(Rest1);
                 type="text" placeholder="Search..." value={search} onChange={(e) =>(setsearch(e.target.value))}></input>
                 {console.log("Body Component Re-Rendered!")}
                 <button className="px-4 bg-orange-400 rounded-4xl cursor-pointer" onClick={() =>{
-                     searchresult=filteredList.filter((x) =>(x?.info?.name.toLowerCase().includes(search.toLowerCase())));
+                    const  searchresult=filteredList.filter((x) =>(x?.info?.name.toLowerCase().includes(search.toLowerCase())));
                     console.log(searchresult);
                     setfilteredlist(searchresult); 
 
