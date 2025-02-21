@@ -1,0 +1,2 @@
+var e=globalThis.parcelRequire94c2;(0,e.register)("iO0e0",function(r,o){Object.defineProperty(r.exports,"__esModule",{value:!0,configurable:!0}),Object.defineProperty(r.exports,"default",{get:()=>n,set:void 0,enumerable:!0,configurable:!0});var t=e("ayMG0"),n=()=>(0,t.jsx)("h1",{children:"This is a Grocery-section of our web-app which contains smaller sub-components and features in itself. Therefore we can bundle Grocery-components together and Food Components together for better performance!"})});
+//# sourceMappingURL=Grocery.73a38b0b.js.map
