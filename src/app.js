@@ -32,7 +32,7 @@ const Grocery=lazy(() =>import("./Components/Grocery.js")); //This is how we wil
        {/* //value={} is updating the existing value of object inside context; */}
     <UserContext.Provider value={{loggedInUser:userName}}>
     <div >
-        <UserContext.Provider value={{loggedInUser : "Mimansha"}}>
+        <UserContext.Provider value={{loggedInUser : "Suruchi"}}>
       <Header/>
       </UserContext.Provider>
       <Outlet/>
@@ -58,6 +58,10 @@ const approuter=createBrowserRouter([
     },
     {
       path:"/",
+      element:<Body/>
+    },
+    {
+      path:"/react1/",
       element:<Body/>
     },
     

@@ -29,7 +29,7 @@ const Header=() =>{
                     <li>Status:{status==true ?"🟢":"🔴"}</li>
                    <Link to="/"><li className="px-4 font-bold">Home</li></Link> 
                    <Link to="/about"><li className="px-4 font-bold">About</li></Link> 
-                   <li className="px-4 font-bold"><a href="/contact">Contact</a></li>
+                   <Link to="/contact"><li className="px-4 font-bold">Contact</li></Link>
                    <Link to="/cart">
                    <li className="px-4 font-bold cursor-pointer">🛒{cartItems?.length}</li>
                    </Link>
