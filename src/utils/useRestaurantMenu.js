@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
+import { MENU_API } from "./constants";
 
-const useRestaurantMenu=() =>{
-    const [resInfo,setresInfo]=useState();
+const useRestaurantMenu=(restaurantId) =>{
+     const [resInfo,setresInfo]=useState(null);
     useEffect(() =>{
         fetchMenu();
     },[]);
     const fetchMenu= async () =>{
-        const data= await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=29.1755236&lng=79.51959389999999&restaurantId=148023&catalog_qa=undefined&submitAction=ENTER")
+        const data= await fetch(MENU_API+restaurantId);
         const js= await data.json();
+        console.log(js);
         setresInfo(js);
         
     }
     return resInfo;
 }
 export default useRestaurantMenu;
+
