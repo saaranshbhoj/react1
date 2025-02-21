@@ -60,6 +60,7 @@ const approuter=createBrowserRouter([
       path:"/",
       element:<Body/>
     },
+    
     {
       path:"/cart",
       element:<Cart/>

@@ -1,6 +1,7 @@
 import UserContext from "../utils/UserContext";
 import { useContext } from "react";
 import React from "react";
+import { IMG_URL } from "../utils/constants";
 
 //Passing Multiple different props to child component makes it reusable and scalable!!
 const Rest1=(props) =>{
@@ -10,7 +11,7 @@ const Rest1=(props) =>{
  
     return(
         <div className=" m-4 p-4 min-w-[200px] bg-gray-200 shadow-2xl rounded-lg w-auto cursor-pointer">
-            <img className="rounded-lg size-28 w-auto "src={"https:media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +cloudinaryImageId}></img>
+            <img className="rounded-lg size-28 w-auto "src={IMG_URL +cloudinaryImageId}></img>
             <h1 className="font-extrabold py-2 text-lg"> {name} </h1>
             <h2 className="font-bold">{cuisines?.join()}</h2>
             <h2 className="font-bold">{avgRating}</h2>

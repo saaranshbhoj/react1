@@ -1,25 +1,12 @@
 {
-   
+  "scripts": {
+  "predeploy": "parcel build index.html --public-url /react1/",
+  "deploy": "gh-pages -d dist",
+  "start": "parcel index.html",
+  "build": "parcel build index.html",
+  "test": "jest"
+},
 
-    "scripts": {
-   
-
-       
-
-    "start": "parcel index.html",
-   
-
-       
-
-    "build": "parcel build index.html",
-   
-
-       
-
-    "test": "jest"
-   
-
-    },
    
 
     "dependencies": {
@@ -94,6 +81,11 @@
        
 
     "babel-jest": "^29.7.0",
+   
+
+       
+
+    "gh-pages": "^6.3.0",
    
 
        
