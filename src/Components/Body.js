@@ -29,7 +29,7 @@ const RestaurantOpen=withOpenLabel(Rest1);
             <div className="filter p-4 m-4 flex">
                
                 <button className="button border-4 border-orange-300 bg-orange-300 cursor-pointer rounded-lg" onClick={() =>{
-                    filter=resinfo.filter((x) =>(x.info.avgRating>4.2));
+                    filter=filteredList?.filter((x) =>(x.info.avgRating>4.2));
                     console.log(filter);
                     setfilteredlist(filter);
                     
