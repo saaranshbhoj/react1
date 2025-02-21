@@ -29,7 +29,7 @@ const RestaurantOpen=withOpenLabel(Rest1);
             <div className="filter p-4 m-4 flex">
                
                 <button className="button border-4 border-orange-300 bg-orange-300 cursor-pointer rounded-lg" onClick={() =>{
-                    const filtered=resinfo?.filter((x) =>(x.info.avgRating>4.2));
+                   const filtered = resinfo?.length ? resinfo.filter((x) => x.info.avgRating > 4.2) : [];
                     console.log(filtered);
                     setfilteredlist(filtered);
                     
@@ -41,7 +41,10 @@ const RestaurantOpen=withOpenLabel(Rest1);
                 type="text" placeholder="Search..." value={search} onChange={(e) =>(setsearch(e.target.value))}></input>
                 {console.log("Body Component Re-Rendered!")}
                 <button className="px-4 bg-orange-400 rounded-4xl cursor-pointer" onClick={() =>{
-                    const  searchresult=resinfo?.filter((x) =>(x?.info?.name.toLowerCase().includes(search.toLowerCase())));
+                    const searchresult = resinfo?.length
+                    ? resinfo.filter((x) => x?.info?.name.toLowerCase().includes(search.toLowerCase()))
+                    : [];
+                  
                     console.log(searchresult);
                     setfilteredlist(searchresult); 
 
@@ -51,7 +54,7 @@ const RestaurantOpen=withOpenLabel(Rest1);
                  {filteredList?.map((x) =>(
                    <Link key={x.info.id} to={"/menu/" +x.info.id}>
                     {x.info.isOpen==true? (<RestaurantOpen resdata={x}/> ) :(<Rest1  resdata={x}></Rest1>)}
-                    </Link>))};
+                    </Link>))}
             </div>
         </div>
    ) }    
